@@ -488,6 +488,20 @@ p {
     display: flex;
   }
 
+    .basket-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .basket-count {
+    position: static;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+}
+
   /* TYPOGRAPHY */
   h1 { font-size: 26px; }
   h2 { font-size: 22px; }
