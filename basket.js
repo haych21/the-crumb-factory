@@ -27,11 +27,16 @@ function updateBasketCount() {
   if (counter) counter.textContent = total;
 }
 
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+// HAMBURGER MENU
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+  }
 });
 
 // RUN ON PAGE LOAD
