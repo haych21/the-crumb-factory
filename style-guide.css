@@ -42,6 +42,13 @@
   border: none;
   cursor: pointer;
   padding: 5px;
+  transform: none !important;
+}
+
+.hamburger:hover,
+.hamburger:active {
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .hamburger span {
