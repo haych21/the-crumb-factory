@@ -1,0 +1,541 @@
+/* ==========================================================================
+   0. GOOGLE FONTS IMPORT
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+/* ==========================================================================
+   1. COLOR SCHEMES GALLERY (Your Website Theme Engine)
+   ========================================================================== */
+
+/* 💻 SITE 1: Default Modern Tech Blue (Applied automatically) */
+:root {
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-primary: #3b82f6;     /* Bright Blue */
+  --color-primary-hover: #1d4ed8;
+  --color-border: #e2e8f0;
+
+  /* Global Layout Variables (Shared across all themes) */
+  --font-headings: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --border-radius: 8px;
+}
+
+/* 🥐 SITE 2: Warm Bakery (Warm creams, rich chocolate, and warm honey amber) */
+.theme-bakery {
+  --color-bg: #fdfbf7;          /* Soft Cream Background */
+  --color-card: #ffffff;
+  --color-text: #4a3728;        /* Deep Chocolate Brown Text */
+  --color-text-muted: #8c7662;  /* Muted Crust Brown */
+  --color-primary: #d97706;     /* Honey Amber Accent */
+  --color-primary-hover: #b45309;
+  --color-border: #f3eae0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.basket-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.basket-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Update this in your style-guide.css file */
+.card-accent {
+  width: 100%;
+}
+
+/* Fix this in your style-guide.css file */
+.btn {
+  display: inline-flex;
+  align-items: center;      /* 🪄 Centers text top-to-bottom */
+  justify-content: center;  /* 🪄 Centers text left-to-right */
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+/* Our-Story-Banner */
+.intro-card {
+  text-align: center;
+  padding: 60px 40px;
+  background-image: url(/images/our-story-banner.jpg);
+  background-size: contain;
+}
+
+.intro-card p {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Our-Story-MeetTheTeam */
+.team-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-card {
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+.team-role {
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* Our-Story-Footer-CTA */
+.footer-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.footer-cta-heading {
+  color: var(--color-bg);
+  margin-bottom: 10px;
+}
+
+.footer-cta-text {
+  color: var(--color-bg);
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.footer-cta-btn {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.copyright {
+  margin-top: 20px;
+}
+
+
+/* 👑 SITE 3: Luxury Boutique / Fashion (Crisp white, charcoal, and elegant rose-gold) */
+.theme-luxury {
+  --color-bg: #fafafa;          /* Soft Minimal White */
+  --color-card: #ffffff;
+  --color-text: #1c1917;        /* Clean Onyx Charcoal Text */
+  --color-text-muted: #78716c;  /* Soft Stone Gray */
+  --color-primary: #c2410c;     /* Muted Rose-Gold / Terracotta Accent */
+  --color-primary-hover: #9a3412;
+  --color-border: #e7e5e4;
+}
+
+/* 🕹️ SITE 4: Dark Cyber / Gaming (Deep blacks, silver text, and sharp neon emerald) */
+.theme-cyber {
+  --color-bg: #09090b;          /* Pure Jet Black Background */
+  --color-card: #18181b;        /* Slate Gray Container Box */
+  --color-text: #000;        /* Crisp White Text */
+  --color-text-muted: #a1a1aa;  /* Muted Cool Silver */
+  --color-primary: #10b981;     /* Vivid Neon Emerald Accent */
+  --color-primary-hover: #059669;
+  --color-border: #27272a;
+}
+
+/* ==========================================================================
+   2. BASIC RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   3. FONT FAMILY VARIATIONS
+   ========================================================================== */
+.font-tech-heading { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+.font-tech-body    { font-family: 'Inter', sans-serif; }
+
+.font-serif-heading { font-family: 'Playfair Display', serif; font-weight: 700; }
+.font-serif-body    { font-family: 'Lora', serif; }
+
+.font-clean-heading { font-family: 'Outfit', sans-serif; font-weight: 700; }
+.font-clean-body    { font-family: 'Open Sans', sans-serif; }
+
+/* ==========================================================================
+   4. TYPOGRAPHY H1 - H6 SCALE
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  color: var(--color-text);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+h1 { font-size: 36px; letter-spacing: -0.5px; }
+h2 { font-size: 28px; font-weight: 700; }
+h3 { font-size: 22px; font-weight: 700; }
+h4 { font-size: 18px; font-weight: 700; }
+h5 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+h6 { font-size: 14px; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; }
+
+p { 
+  font-family: var(--font-body);
+  font-size: 16px; 
+  color: var(--color-text-muted); 
+  margin-bottom: 16px; 
+}
+
+.text-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   5. NAVIGATION BAR COMPONENT (Single clean header bar)
+   ========================================================================== */
+.navbar {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+}
+.navbar .brand { font-family: var(--font-headings); font-weight: bold; font-size: 20px; color: var(--color-primary); }
+.navbar .nav-links a { font-family: var(--font-body); color: var(--color-text-muted); text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.2s; }
+.navbar .nav-links a:hover { color: var(--color-primary); }
+
+/* ==========================================================================
+   6. CARD VARIATIONS 
+   ========================================================================== */
+.card { padding: 25px; border-radius: var(--border-radius); margin-bottom: 20px; background-color: var(--color-card); }
+.card-standard { border: 1px solid var(--color-border); }
+.card-elevated { border: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.03); }
+.card-accent { border: 1px solid var(--color-border); border-top: 4px solid var(--color-primary); }
+.card-dark { background-color: var(--color-text); border: none; }
+.card-dark h1, .card-dark h2, .card-dark h3, .card-dark h4, .card-dark h5, .card-dark h6 { color: var(--color-bg); }
+.card-dark p { opacity: 0.8; } 
+
+/* ==========================================================================
+   7. BUTTON VARIATIONS
+   ========================================================================== */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; font-family: var(--font-body); font-size: 14px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s ease; }
+.btn-primary { background-color: var(--color-primary); color: var(--color-card); border-radius: var(--border-radius); }
+.btn-primary:hover { background-color: var(--color-primary-hover); }
+.btn-secondary { background-color: transparent; color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--border-radius); }
+.btn-secondary:hover { background-color: rgba(0,0,0,0.02); border-color: var(--color-text-muted); }
+.btn-pill { background-color: var(--color-text); color: var(--color-card); border-radius: 9999px; }
+.btn-pill:hover { opacity: 0.9; }
+.btn-minimal { background-color: transparent; color: var(--color-primary); padding-left: 0; padding-right: 0; }
+.btn-minimal:hover { color: var(--color-primary-hover); text-decoration: underline; }
+
+/* ==========================================================================
+   8. STYLE GUIDE SHOWCASE UTILITIES (Dashboard specific helpers)
+   ========================================================================== */
+.main-container { max-width: 1000px; margin: 0 auto; }
+.guide-section { margin-top: 50px; padding-top: 20px; border-top: 2px dashed var(--color-border); }
+.guide-title { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-bottom: 20px; }
+.palette-grid { display: flex; gap: 30px; flex-wrap: wrap; }
+.color-swatch { width: 100px; text-align: center; font-size: 12px; }
+.swatch-box-bg, .swatch-box-card, .swatch-box-text, .swatch-box-primary { width: 80px; height: 80px; border-radius: 50%; border: 1px solid var(--color-border); margin: 0 auto 10px auto; }
+.swatch-box-bg { background-color: var(--color-bg); }
+.swatch-box-card { background-color: var(--color-card); }
+.swatch-box-text { background-color: var(--color-text); }
+.swatch-box-primary { background-color: var(--color-primary); }
+.showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px; }
+.button-showcase { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.component-group { display: flex; flex-direction: column; }
+.component-label { font-size: 11px; color: var(--color-text-muted); margin-bottom: 8px; text-transform: lowercase; font-family: monospace; }
+.type-row { display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px; margin-bottom: 15px; }
+.type-label { font-size: 12px; color: var(--color-text-muted); font-family: monospace; width: 120px; flex-shrink: 0; }
+.font-preview-box { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--border-radius); padding: 20px; }
+.font-tag { font-size: 11px; font-family: monospace; background: var(--color-bg); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+.font-margin-sm { margin-bottom: 5px; }
+.font-size-sm { font-size: 14px; margin: 0; }
+.font-weight-normal { font-weight: normal; }
+
+/* Theme preview mini-cards style */
+.theme-preview-card { padding: 15px; border-radius: 8px; border: 1px solid var(--color-border); }
+.theme-dot-primary { width: 15px; height: 15px; display: inline-block; border-radius: 50%; }
+.theme-dot-text { width: 15px; height: 15px; display: inline-block; border-radius: 50%; }
+.theme-margin-bottom-sm { margin-bottom: 4px; }
+.theme-font-size-sm { font-size: 12px; margin-bottom: 10px; }
+
+
+/* ==========================================================================
+   9. EXTRA WORKSPACE UTILITIES (Keeping your HTML purely structural)
+   ========================================================================== */
+
+/* Spacing Helpers */
+.margin-bottom-sm {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 40px;
+}
+
+/* 🪄 Clears out standard card padding so the top image sits perfectly flush */
+.card-flush {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Adds clean internal padding strictly for text contents under an image */
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+
+/* ==========================================================================
+   11. HERO BANNER OVERLAY SYSTEM
+   ========================================================================== */
+.hero-banner-bg {
+  width: 100%;
+  min-height: 450px;           /* Gives the photo a tall, commanding presence */
+  background-image: url('/images/hero-banner.jpg'); /* 🪄 Put your online image link here! */
+  background-size: cover;      /* Fills the entire banner area cleanly */
+  background-position: center; /* Keeps the middle of the photo in view */
+  border-radius: var(--border-radius);
+  padding: 40px;               /* Pushes the inner floating card away from the edges */
+  display: flex;
+  align-items: center;         /* Centers the floating card vertically */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* A specialized floating glass card to go inside the background banner */
+.floating-card {
+  max-width: 450px;            /* Prevents the card from stretching too wide */
+  background-color: rgba(255, 255, 255, 0.90); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.floating-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+}
+
+/* ==========================================================================
+   12. SMALL CARD VARIANT
+   ========================================================================== */
+.card-small .card-img {
+  height: 140px;
+  object-fit: cover;
+}
+
+.card-small .card-body {
+  padding: 10px 15px 15px 15px;
+}
+
+.card-small .font-serif-heading {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.card-small .font-serif-body {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.card-small .btn {
+  padding: 7px 14px;
+  font-size: 0.78rem;
+}
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   13. MOBILE RESPONSIVE
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  body {
+    padding: 12px;
+  }
+
+  /* NAVBAR */
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar .nav-links a {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* TYPOGRAPHY */
+  h1 { font-size: 26px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+
+  /* GRIDS */
+  .picks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HERO BANNER */
+  .hero-banner-bg {
+    min-height: 300px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .floating-card {
+    max-width: 100%;
+  }
+
+  /* INTRO CARD */
+  .intro-card {
+    padding: 40px 20px;
+  }
+
+  .intro-card p {
+    max-width: 100%;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 18px;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+
+  /* CARD SMALL */
+  .card-small .card-img {
+    height: 120px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    width: 100%;
+  }
+
+  /* MAIN CONTAINER */
+  .main-container {
+    max-width: 100%;
+  }
+
+}
+
+
+
