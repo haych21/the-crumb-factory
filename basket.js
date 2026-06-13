@@ -28,16 +28,12 @@ function updateBasketCount() {
 }
 
 // HAMBURGER MENU
-window.onload = function() {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-  }
-};
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
 
 // RUN ON PAGE LOAD
 updateBasketCount();
