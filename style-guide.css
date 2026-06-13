@@ -488,19 +488,18 @@ p {
     display: flex;
   }
 
-    .basket-link {
+  .basket-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
   }
 
-  .basket-count {
+   .basket-count {
     position: static;
-    width: 18px;
-    height: 18px;
-    font-size: 11px;
+    margin-left: 4px;
   }
-}
+
+
 
   /* TYPOGRAPHY */
   h1 { font-size: 26px; }
@@ -555,8 +554,8 @@ p {
   .main-container {
     max-width: 100%;
   }
-
 }
+
 
 
 
