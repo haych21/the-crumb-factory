@@ -28,7 +28,7 @@ function updateBasketCount() {
 }
 
 // HAMBURGER MENU
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = function() {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('open');
     });
   }
-});
+};
 
 // RUN ON PAGE LOAD
 updateBasketCount();
