@@ -499,6 +499,16 @@ p {
     margin-left: 4px;
   }
 
+    .card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .floating-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
 
 
   /* TYPOGRAPHY */
