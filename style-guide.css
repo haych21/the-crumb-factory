@@ -564,6 +564,40 @@ p {
   .main-container {
     max-width: 100%;
   }
+
+    /* IMAGES - ADD THIS */
+  .card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;  /* ← ADD THIS */
+    object-position: center;  /* ← ADD THIS */
+  }
+
+  .card-small .card-img {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;  /* ← ADD THIS */
+  }
+
+  /* If you have a hero image */
+  .hero-banner-bg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Service section images */
+  .service-pic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* ← ADD THIS */
+  }
+
+  /* Any other images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 
