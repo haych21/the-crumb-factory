@@ -530,7 +530,7 @@ p {
 .hero-banner-bg {
     min-height: 200px;  /* ← REDUCE THIS */
     padding: 20px;
-    background-image: url('/images/hero-mobile.png');  /* ← NEW mobile image */
+    background-image: url('/images/hero-mobile.jpg');  /* ← NEW mobile image */
     flex-direction: column;
     margin-bottom: 20px;
     background-size: cover;  /* ← CHANGE BACK to cover */
