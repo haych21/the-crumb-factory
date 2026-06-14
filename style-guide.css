@@ -530,6 +530,7 @@ p {
 .hero-banner-bg {
     min-height: 200px;  /* ← REDUCE THIS */
     padding: 20px;
+    background-image: url('/images/hero-mobile.png');  /* ← NEW mobile image */
     flex-direction: column;
     margin-bottom: 20px;
     background-size: cover;  /* ← CHANGE BACK to cover */
@@ -557,6 +558,12 @@ p {
   /* CARD SMALL */
   .card-small .card-img {
     height: 120px;
+  }
+
+  .card-flush {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* BUTTONS */
