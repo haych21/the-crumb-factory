@@ -124,7 +124,7 @@
   text-align: center;
   padding: 60px 40px;
   background-image: url(/images/our-story-banner.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 
 .intro-card p {
