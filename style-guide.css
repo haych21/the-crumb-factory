@@ -527,14 +527,14 @@ p {
   }
 
   /* HERO BANNER */
-  .hero-banner-bg {
-    min-height: 300px;
+.hero-banner-bg {
+    min-height: 200px;  /* ← REDUCE THIS */
     padding: 20px;
     flex-direction: column;
     margin-bottom: 20px;
-    background-size: contain;      /* ← ADD THIS */
-    background-repeat: no-repeat;
-  }
+    background-size: cover;  /* ← CHANGE BACK to cover */
+    background-position: center;
+}
 
   /* INTRO CARD */
   .intro-card {
