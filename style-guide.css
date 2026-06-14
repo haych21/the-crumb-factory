@@ -504,6 +504,11 @@ p {
     box-shadow: none;
   }
 
+   .floating-card {
+    width: 100%;              /* ← Full width on mobile */
+    max-width: 100%;
+  }
+
   .floating-card:hover {
     transform: none;
     box-shadow: none;
@@ -526,10 +531,7 @@ p {
     min-height: 300px;
     padding: 20px;
     flex-direction: column;
-  }
-
-  .floating-card {
-    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   /* INTRO CARD */
