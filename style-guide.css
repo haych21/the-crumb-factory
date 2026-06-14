@@ -580,7 +580,7 @@ p {
   .card-img {
     height: 200px;
     width: 100%;
-    object-fit: cover;  /* ← ADD THIS */
+    object-fit: contain;  /* ← ADD THIS */
     object-position: center;  /* ← ADD THIS */
   }
 
